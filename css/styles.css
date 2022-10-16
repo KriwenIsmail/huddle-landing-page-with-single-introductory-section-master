@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    font-family: 'Poppins';
+    font-size: 10pt;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--violet);
+    background-image: url('../images/bg-desktop.svg');
+    background-position: center center;
+    background-size: cover;
+}
+
+a {color:inherit;text-decoration: none;}
+li,ul, ol { list-style: none; }
+button, input { outline: none; border: none }
+button {cursor: pointer;}
+img {width:100%;height:100%}
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; }
+
+@media (max-width: 570px) {
+    body {
+        background-image: url('../images/bg-mobile.svg');
+    }
+    .grid {
+        text-align: center;
+    }
+    .grid h1 {width: 100% !important;}
+    .grid .btn {width:65%; margin:auto;}
+    .grid .text {
+        grid-column: span 2;
+    }
+    .grid .img {
+        grid-column: span 2;
+    }
+    .container {
+        width: 100% !important;
+    }
+    footer .icons-wrapper {
+        justify-content: center !important;
+    }
+}
+
+.container {
+    width: 95%;
+    padding: 1em;
+    margin: auto;
+}
+
+section {
+    margin-top: 5rem !important;
+}
+
+header .logo {
+    width: 10rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid .text {
+    color: white;
+}
+.grid .text .wrapper {
+    height: 70%;
+    padding: 1rem;
+}
+.grid .text h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    width: 85%;
+}
+.grid .text p {
+    font-size: 1em;
+    padding: 1.5em 0;
+}
+
+.btn {
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    padding: .8em 3.5rem;
+    font-size: 1.2em;
+    color: var(--violet);
+    background: white;
+    text-align: center;
+    -webkit-box-shadow: 0 .25em .75em rgba(0,0,0,.2);
+    box-shadow: 0 .25em .75em rgba(0,0,0,.2);
+}
+
+footer .icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+footer .icon {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 .5em;
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 4vw;
+    height: 4vw;
+    padding: 1em;
+    text-align: center;
+}
+
+footer .icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
